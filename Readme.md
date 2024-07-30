@@ -1,0 +1,1 @@
+Este repositório está armazenado os códigos feitos durante minhas aulas de Qualidade e Testes de Software (com Java) da Faculdade durante o terceiro semestre (2024/2)
