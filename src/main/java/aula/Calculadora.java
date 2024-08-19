@@ -6,13 +6,18 @@ import java.util.Objects;
 public class Calculadora {
 
 	public Double somar(Double valor1, Double valor2) {
+		if(valor1 == null || valor2 == null) {
+			System.out.println("erro nas entradas");
+			return -1d;			
+		}
 		return valor1 + valor2;
 	}
 	
 	public Double somar(Double[] valores) {
 		if(Objects.isNull(valores)) {
-			throw new IllegalArgumentException("Vetor null");
+			throw new IllegalArgumentException("Vetor null");			
 		}
+		
 		var somador = 0d;
 		for(Double valor : valores) {
 			somador = somador + valor;
@@ -61,7 +66,7 @@ public class Calculadora {
 		}
 		
 		
-		var mult = 0d;
+		var mult = 1d;
 		for(Double valor : valores) {
 			mult = mult * valor;
 		}
@@ -69,5 +74,15 @@ public class Calculadora {
 		return  new ResultadoCalculoVO(mult,false,"");
 		
 	}	
+	
+	public Double divisao(Double valor1,Double valor2) {
+		if(valor1 == null || valor2 == null) {
+			throw new IllegalArgumentException("valores null");
+		}
+		if(valor2 == 0d) {
+			throw new IllegalArgumentException("Não é possível dividir por zero");
+		}
+		return valor1/valor2;
+	}
 	
 }
