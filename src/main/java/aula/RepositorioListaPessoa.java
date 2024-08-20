@@ -22,6 +22,10 @@ public class RepositorioListaPessoa {
 		StringBuilder message = new StringBuilder();
 		// pega somente o nome
 		for(Pessoa pessoa : lista) {
+			// marcelo soares
+			// joao da silva
+			// marcelo
+			// joao
 			String nome = pessoa.getNome().split(" ")[0];
 			message.append(nome).append("\n");
 		}		
